@@ -2,12 +2,48 @@ body {
     background: rgb(152, 156, 150);
     margin: 0;
     padding: 0;
+    min-width: 320px;
 }
 
 .main {
     display: flex;
     overflow: hidden;
     height: 100vh;
+
+    #checkbox_toggle {
+        display: none;
+    }
+
+    .burger {
+        display: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .burger-line {
+        background-color: rgb(15, 15, 15);
+        display: block;
+        height: 3px;
+        position: relative;
+        width: 30px;
+
+    }
+
+    .burger-line::before,.burger-line::after {
+        background-color: rgb(23, 24, 24);
+        content: '';
+        display: block;
+        transition: all .3s;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    .burger-line::before {
+        top: 7px;
+    }
+    .burger-line::after {
+        top: -7px;
+    }
 
     &_menu {
         width: 300px;
@@ -18,18 +54,20 @@ body {
         display: flex;
         flex-direction: column;
         height: auto;
-
         
             .header {
                 margin-top: 15px;
                 font-size: 22px;
-                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 
             }   
 
             .title_menu {
                 list-style: none;
                 padding: 0;
+                margin-top: 0;
                 
                             
             }
@@ -42,6 +80,11 @@ body {
                 padding: 10px 30px;
                 text-decoration: none;
                 cursor: pointer;
+            }
+            .list_menu:hover {
+                transition: all .8s;
+                color: rgb(174, 200, 202);
+                background: rgb(51, 57, 112);
             }
     }
 
@@ -57,5 +100,7 @@ body {
             margin-left: 20px;
         }
 
+        
     }
 }
+
