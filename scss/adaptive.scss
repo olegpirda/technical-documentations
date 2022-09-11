@@ -32,12 +32,10 @@
         
     .main_menu { 
         max-height: 0;
-        overflow: hidden;
         position: absolute;
         background-color: bisque;
         text-align: center;
-        
-        
+              
     }   
 
     .main .main_article {
@@ -46,7 +44,7 @@
     
     #checkbox_toggle:checked ~ .main_menu {
         display: block;
-        padding: 27px 0;
+        padding: auto;
         max-height: 100%;
         transition: all .5s;
         width: 100%;
@@ -69,6 +67,7 @@
     
     .main_menu {
         width: 100px;
+       
         
         .list_menu {
            padding: 5px;
@@ -79,4 +78,7 @@
         font-size: 12px;
         padding: 10px;
     }
+    #checkbox_toggle:checked ~ .main_menu {
+        padding-bottom: 20px;
+    }  
 }
